@@ -5,6 +5,30 @@ import GalleryContainer from '../../src/components/GalleryContainer/GalleryConta
 import CrazyButton from '../../src/components/CrazyButton/CrazyButton.js';
 import UploadModal from '../../src/components/CrazyButton/UploadModal';
 
+import { useTranslation } from "react-i18next";
+import i18n from "i18next";
+import { initReactI18next } from "react-i18next";
+import translationEN from "../../src/locales/en.json";
+import translationFR from "../../src/locales/fr.json";
+import LanguageSwitcher from "../LanguageSwitcher.js";
+
+const resources = {
+  en: {
+    translation: translationEN,
+  },
+  fr: {
+    translation: translationFR,
+  }
+};
+
+i18n.use(initReactI18next).init({
+  resources,
+  lng: "en",
+  fallbackLng: "en",
+  interpolation: {
+    escapeValue: false,
+  },
+});
 
 
 const galleryItems = [
@@ -28,6 +52,9 @@ const galleryItems = [
  
 const Challenges = () => {
 
+  const { t } = useTranslation();
+
+
   const [open, setOpen] = React.useState(false);
  
   const handleClose = () => {
@@ -40,45 +67,46 @@ const Challenges = () => {
 
     return (
 
-        <div className="Challenges">
+      <div className="Challenges">
 
         <header className="Challenges-header">
 
-            <p> Welcome to Cap N' Can Weekly Challenges ! </p>
+          <LanguageSwitcher />
 
-            <p> Current Challenge: The colour blue </p>
-            <CrazyButton buttonText="Upload" />
+          <p> {t("welcome")} </p>
 
-            <button type="button" onClick={handleOpen}>
-                Click Me to Open Upload Window
-            </button>
+          <p> {t("current_challenge")} </p>
 
-        <UploadModal isOpen={open} onClose={handleClose}>
-          <>
-          <button className="close-btn" onClick={handleClose}>x</button>
-          <h1>Upload an Image</h1>
-          <h3>Click here to upload your image.</h3>
-          <label htmlFor="name">Name of Artwork:</label>
-          <input type="text" id="name" name="name" />
-          <label htmlFor="tags">Tags:</label>
-          <input type="text" id="tags" name="tags" />
-          <button className="up-btn" onClick={handleClose}>Upload</button>
-          </>
-        </UploadModal>
+          <CrazyButton buttonText="Upload" />
+
+          <button type="button" onClick={handleOpen}>
+            {t("click")}
+          </button>
+
+          <UploadModal isOpen={open} onClose={handleClose}>
+            <>
+            <button className="close-btn" onClick={handleClose}>x</button>
+            <h3>{t("upload")}</h3>
+            <label htmlFor="name">{t("name_of_art")}</label>
+            <input type="text" id="name" name="name" />
+            <label htmlFor="tags">{t("tags")}</label>
+            <input type="text" id="tags" name="tags" />
+            <button className="up-btn" onClick={handleClose}>Upload</button>
+            </>
+          </UploadModal>
 
         </header>
 
         <header className='Gallery-header'>
-            <p> Week 1 Challenge</p>
-            <GalleryContainer galleryItems={galleryItems} />
+          <p> {t("week")}: 1</p>
+          <GalleryContainer galleryItems={galleryItems} />
 
-            <p> Week 2 Challenge</p>
-            <GalleryContainer galleryItems={galleryItems} />
+          <p> {t("week")}: 2</p>
+          <GalleryContainer galleryItems={galleryItems} />
 
-            <p> Week 3 Challenge</p>
-            <GalleryContainer galleryItems={galleryItems} />
-            </header>
-
+          <p> {t("week")}: 3</p>
+          <GalleryContainer galleryItems={galleryItems} />
+        </header>
 
         </div>
     );

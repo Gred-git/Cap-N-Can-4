@@ -1,4 +1,4 @@
-import { Nav, NavLink, Bars, NavMenu } from "../../../my-app/src/components/Navbar/NavbarElements.js";
+import { NavLink } from "../../../my-app/src/components/Navbar/NavbarElements.js";
 
 export default function NotFound() {
     return (
