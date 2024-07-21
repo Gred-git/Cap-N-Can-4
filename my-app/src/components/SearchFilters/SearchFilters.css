@@ -65,7 +65,7 @@
   }
   
   .column input[type="radio"]:checked + label {
-    background-color: #4CAF50;
+    background-color: #66CCFF;
     color: #fff;
   }
   
@@ -88,11 +88,11 @@
     align-items: center;
     justify-content: center;
     margin-left: 15px;
-    background-color: #4CAF50;
+    background-color: #66CCFF;
   }
   
   .column select option:checked {
-    background-color: #4CAF50;
+    background-color: #66CCFF;
     color: #fff;
   }
   

@@ -15,7 +15,6 @@ const Navbar = () => {
                     <NavLink to="/Forums" activeStyle> Forums </NavLink>
 
                 </NavMenu>
-
             </Nav>
         </>
     );
