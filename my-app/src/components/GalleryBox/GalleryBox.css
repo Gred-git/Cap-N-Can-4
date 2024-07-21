@@ -1,0 +1,46 @@
+.gallery-box {
+    width: 100%;
+    max-width: 400px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin: 40px;
+  }
+  
+  .gallery-image {
+    width: 100%;
+    height: auto;
+  }
+  
+  .gallery-details {
+    padding: 15px;
+  }
+  
+  .gallery-title {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .gallery-artist {
+    font-style: italic;
+    color: #666;
+    margin-bottom: 10px;
+  }
+  
+  .tag-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .tag-item {
+    background-color: #f2f2f2;
+    color: #333;
+    padding: 4px 8px;
+    border-radius: 12px;
+    margin-right: 6px;
+    margin-bottom: 6px;
+  }
+  
