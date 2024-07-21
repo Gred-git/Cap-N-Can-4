@@ -62,6 +62,7 @@ const Challenges = () => {
           <input type="text" id="name" name="name" />
           <label htmlFor="tags">Tags:</label>
           <input type="text" id="tags" name="tags" />
+          <button className="up-btn" onClick={handleClose}>Upload</button>
           </>
         </UploadModal>
 
