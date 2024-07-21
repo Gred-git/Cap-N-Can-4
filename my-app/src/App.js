@@ -1,6 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
+import NotFound from "./pages/NotFound";
 import Home from "./pages";
 import Search from './pages/Search';
 import Challenges from './pages/Challenges';
@@ -13,6 +14,7 @@ function App() {
         <Router>
             <Navbar />
             <Routes>
+                <Route path="*" element={<NotFound />} />
                 <Route path="/" element={<Home />} />
                 <Route path="/search" element={<Search />} />
                 <Route path="/challenges" element={<Challenges />} />
