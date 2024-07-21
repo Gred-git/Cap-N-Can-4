@@ -1,49 +1,43 @@
 .crazy-button {
-    background: linear-gradient(45deg, #ffdb59, #f2596c, #8d4fff, #56d6ff);
-    border: none;
-    padding: 12px 24px;
-    cursor: pointer;
-    outline: none;
-    position: relative;
-    overflow: hidden;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5); 
-    color:#fff;
-    scale: 250%;
-    margin: 50px;
-  }
+  background: linear-gradient(45deg, #ffdb59, #f2596c, #8d4fff, #56d6ff);
+  border: none;
+  padding: 12px 24px;
+  cursor: pointer;
+  outline: none;
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+  color: #fff;
+  margin: 50px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  font-size: 16px;
+  font-weight: bold;
+}
 
-  .crazy-button-buttonText {
-    font-size: 16px;
-    font-weight: bold;
-    color: #fff;
-  }
-  
-  .crazy-button::before {
-    content: '';
-    position: absolute;
-    top: -100%;
-    left: -100%;
-    width: 200%;
-    height: 200%;
-    background: linear-gradient(45deg, #ffdb59, #f2596c, #8d4fff, #56d6ff);
-    transition: all 0.4s;
-    z-index: -1;
-  }
-  
-  .crazy-button:hover::before {
-    top: 0;
-    left: 0;
-  }
-  
-  .crazy-button:hover {
-    color: #fff;
-    transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-  }
-  
-  .crazy-button:focus::before {
-    outline: none;
-  }
-  
+.crazy-button:hover {
+  transform: translateY(-5px) scale(1.1);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.crazy-button:focus {
+  outline: none;
+}
+
+.crazy-button::before {
+  content: '';
+  position: absolute;
+  top: -100%;
+  left: -100%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(45deg, #ffdb59, #f2596c, #8d4fff, #56d6ff);
+  transition: all 0.4s;
+  z-index: -1;
+}
+
+.crazy-button:hover::before {
+  top: 0;
+  left: 0;
+}

@@ -33,6 +33,7 @@
   .column:last-child {
     border-right: none; 
   }
+
   
   input[type="radio"] {
     display: none;
@@ -66,7 +67,7 @@
   
   input[type="radio"]:checked + label {
     color: #66CCFC;
-    color: #fff;
+
   }
   
   input[type="radio"]:checked + label::before {
@@ -105,3 +106,28 @@
     background-color: #fff; 
     color: #000; 
   }
+
+  .radio-tooltip-container {
+    position: inherit;
+    display: flexbox;
+  }
+  
+  .tooltip {
+    visibility: hidden;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    padding: 5px;
+    border-radius: 6px;
+    position: absolute;
+    z-index: 1;
+    bottom: 100%; 
+    left: 50%;
+    transform: translateX(-50%);
+    width: 300px; 
+  }
+  
+  .radio-tooltip-container:hover .tooltip {
+    visibility: visible;
+  }
+  
