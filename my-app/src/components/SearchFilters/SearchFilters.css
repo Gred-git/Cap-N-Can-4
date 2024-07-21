@@ -34,7 +34,7 @@
     border-right: none; 
   }
   
-  .column input[type="radio"] {
+  input[type="radio"] {
     display: none;
   }
   
@@ -64,13 +64,13 @@
     transition: background-color 0.3s ease;
   }
   
-  .column input[type="radio"]:checked + label {
-    background-color: #66CCFF;
+  input[type="radio"]:checked + label {
+    color: #66CCFC;
     color: #fff;
   }
   
-  .column input[type="radio"]:checked + label::before {
-    background-color: #fff;
+  input[type="radio"]:checked + label::before {
+    color: #fff;
   }
   
   .filter-title {
@@ -91,17 +91,17 @@
     background-color: #66CCFF;
   }
   
-  .column select option:checked {
+  select option:checked {
     background-color: #66CCFF;
     color: #fff;
   }
   
-  .column select option {
+  select option {
     background-color: #fff;
     color: #000;
   }
   
-  .column select option[value="None"] {
+  select option[value="None"] {
     background-color: #fff; 
     color: #000; 
   }
